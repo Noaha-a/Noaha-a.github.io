@@ -1,35 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>noah</title>
-  <style>
-    a {
-      text-decoration: none;
-    }
-
-    li {
-      list-style: none;
-    }
-  </style>
+  <meta name="description" content="Noaha 的个人主页">
+  <title>Noaha · 个人主页</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-  <h1>小迷踪！</h1>
-  <ul>
-    <li>
-      <a href="https://www.yuque.com/u37574081">语雀</a>
-    </li>
-    <li>
-      <a href="https://blog.csdn.net/m0_73893567?spm=1000.2115.3001.5343">CSDN</a>
-    </li>
-  </ul>
+  <header class="site-header">
+    <nav class="nav" aria-label="主导航">
+      <a class="brand" href="#home">Noaha</a>
+      <ul class="nav-links">
+        <li><a href="#home">首页</a></li>
+        <li><a href="#links">链接</a></li>
+        <li><a href="#knowledge-base">知识库</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <script>
+  <main>
+    <section class="hero" id="home">
+      <p class="eyebrow">Personal Website</p>
+      <h1>你好，我是 Noaha。</h1>
+      <p class="intro">这里是我的个人主页，记录正在学习的内容，也分享一些有用的文档和链接。</p>
+      <div>
+        <a class="button" href="#links">浏览我的链接</a>
+      </div>
+    </section>
 
-  </script>
+    <section class="section" id="links">
+      <div class="section-heading">
+        <h2>我的链接</h2>
+        <p>可以在这里找到我的文章、笔记和其他内容。</p>
+      </div>
+
+      <div class="link-grid">
+        <a class="link-card" href="https://www.yuque.com/u37574081" target="_blank" rel="noopener noreferrer">
+          <h3>语雀</h3>
+          <p>查看我的文档和笔记 →</p>
+        </a>
+        <a class="link-card" href="https://blog.csdn.net/m0_73893567?spm=1000.2115.3001.5343" target="_blank" rel="noopener noreferrer">
+          <h3>CSDN</h3>
+          <p>查看我的技术文章 →</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="section knowledge-section" id="knowledge-base">
+      <div class="section-heading">
+        <p class="eyebrow">Knowledge Base</p>
+        <h2>知识库</h2>
+        <p>集中整理文档、笔记和学习资料。</p>
+      </div>
+
+      <div class="knowledge-layout">
+        <aside class="knowledge-sidebar" aria-label="文档目录">
+          <div class="knowledge-sidebar-heading">
+            <h3>文档目录</h3>
+            <span id="document-count"></span>
+          </div>
+          <ul class="document-list" id="document-list"></ul>
+        </aside>
+
+        <article class="markdown-content" id="markdown-content" aria-live="polite">
+          <p class="loading-state">正在加载文档……</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © Noaha · Built with HTML &amp; CSS
+  </footer>
+
+  <script src="index.js" defer></script>
 </body>
 
 </html>
